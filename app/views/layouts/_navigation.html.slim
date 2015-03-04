@@ -1,0 +1,32 @@
+#header.nav.navbar.navbar-fixed-top.navbar-default
+  .container
+    .navbar-header
+      button.navbar-toggle data-target=".navbar-collapse" data-toggle="collapse" type="button"
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      = link_to t('.logo'), root_path, class: 'navbar-brand'
+    .collapse.navbar-collapse
+      ul.nav.navbar-nav
+        - if user_signed_in?
+          li
+            = link_to t('.activities')
+          li
+            = link_to t('.goals')
+          li
+            = link_to t('.settings')
+      ul.nav.navbar-nav.navbar-right
+        - if user_signed_in?
+            li.dropdown
+              a.dropdown-toggle data-toggle="dropdown"
+                = t('.current_user')
+                span.caret
+              ul.dropdown-menu
+                li
+                  = link_to t('.sign_out')
+        - else
+            li
+              = link_to t('.sign_up')
+            li
+              = link_to t('.sign_in')

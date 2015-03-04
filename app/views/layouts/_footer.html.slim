@@ -1,0 +1,28 @@
+#footer.navbar-fixed-bottom
+  .container
+    .row
+      .col-xs-12.col-sm-6.sol-md-6.inline-nav-items
+        - if user_signed_in?
+          ul
+            li
+              = link_to t('.activities')
+            li
+              = link_to t('.goals')
+            li
+              = link_to t('.settings')
+        - else
+          ul
+            li
+              = link_to t('.home')
+            li
+              = link_to t('.about_us')
+            li
+              = link_to t('.contact_us')
+      .col-xs-12.col-sm-6.col-md-6
+        .pull-right
+          | &copy;
+          = Time.now.year
+          | &nbsp;
+          = t('.company_name')
+          | &nbsp;
+          = t('.all_right_reserved')

@@ -21,3 +21,19 @@
 
 en:
   hello: "Hello world"
+  layouts:
+    navigation:
+      sign_in: "Sign in"
+      sign_out: "Sign out"
+      sign_up: "Sign up"
+      home: "Home"
+      about_us: "About us"
+      contact_us: "Contact_us"
+      activities: "Activities"
+      goals: "Goals"
+      settings: "Settings"
+      company_name: "<Company Name>"
+      all_right_reserved: "All right reserved"
+  home:
+    index:
+      welcome_to: "Welcome to Better Best Me"
