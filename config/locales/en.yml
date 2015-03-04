@@ -37,3 +37,33 @@ en:
   home:
     index:
       welcome_to: "Welcome to Better Best Me"
+  common:
+    submit: Submit
+  devise:
+    registrations:
+      new:
+        sign_up: Sign Up
+        email_address: Email Address
+        user_name: Username
+        password: Password
+        password_confirmation: Password Confirmation
+        sign_up_with_google: Sign Up With Google
+        sign_up_with_twitter: Sign Up With Twitter
+        did_not_confirm: Didn't recieve confirmation instructions ?
+        already_account: "Already have an account ? "
+    sessions:
+      new:
+        sign_in: Sign In
+        username_email: Username Or Email
+        user_or_email_address: User Name or Email Address
+        password: Password
+        remember_me: Remember me
+        sign_in_with_google: Sign In With Google
+        sign_in_with_twitter: Sign In With Twitter
+        did_not_confirm: Didn't recieve confirmation instructions ?
+        do_not_have_account: Do not have an account ?
+        forgot_password: Forgot Your Password ?
+    passwords:
+      new:
+        forget_password: Forget Your Password ?
+        email: Email

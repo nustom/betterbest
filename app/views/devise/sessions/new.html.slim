@@ -1,0 +1,37 @@
+.row
+  .col-sm-offset-4.col-sm-4
+    = form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'form-signin', id: 'signinForm'}, method: :post) do |f|
+      = devise_error_messages!
+      h2.form-signin-heading
+        = t('.sign_in')
+      .form-group
+        label
+          = t('.username_email')
+        = f.email_field :email, autofocus: true, class: "form-control", placeholder: t('.user_or_email_address')
+      .form-group
+        = f.label :password
+        = f.password_field :password, autocomplete: "off", class: "form-control", placeholder: t('.password')
+      - if devise_mapping.rememberable?
+        .form-group
+          .checkbox
+            label
+              = f.check_box :remember_me
+              = t('.remember_me')
+      .form-group
+        = f.submit t('.sign_in'), class: "btn btn-primary"
+    .form-group
+      = link_to "#{user_omniauth_authorize_path(:google_oauth2)}", class: "btn btn-primary btn-block"
+        = t('.sign_in_with_google')
+    .form-group
+      = link_to "#{user_omniauth_authorize_path(:twitter)}", class: "btn btn-primary btn-block"
+        = t('.sign_in_with_twitter')
+    .form-group
+      = link_to "#{}", class: ""
+        = t('.did_not_confirm')
+    .form-group
+      = t('.do_not_have_account')
+      = link_to "#{new_user_registration_path}", class: ""
+        = t('.sign_up')
+    .form-group
+       = link_to "#{}", class: ""
+        = t('.forgot_password')
