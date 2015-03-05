@@ -67,3 +67,12 @@ en:
       new:
         forget_password: Forget Your Password ?
         email: Email
+      edit:
+        change_your_password: Change your password
+        new_password: New Password
+        confirm_new_password: Confirm New Password
+        change_my_password: Change My Password
+  validations:
+    messages:
+      confirm_password: Password confirm must match with password
+      confirm_change_password: New password confirm must match with new password

@@ -55,3 +55,4 @@ gem 'delayed_job', '~> 4.0.4'
 gem 'devise', '~> 3.4.1'
 
 gem 'slim-rails', '~> 3.0.1'
+gem 'i18n-js'

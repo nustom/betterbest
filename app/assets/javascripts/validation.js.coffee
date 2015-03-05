@@ -4,6 +4,10 @@ $(document).ready ->
       "user[email]":
         required: true
         email: true
+      "user[username]":
+        required: true
+        minlength: 2
+        maxlength: 32
       "user[password]":
         required: true
         minlength: 8
@@ -12,10 +16,10 @@ $(document).ready ->
         required: true
         minlength: 8
         maxlength: 255
-        equalTo: "#pass-word-sign-up"
+        equalTo: "#user_password"
     messages:
       "user[password_confirmation]":
-        equalTo: "I18n.t('home.messages.sign_up.match_password')"
+        equalTo: I18n.t('validations.messages.confirm_password')
 
   $("#signinForm").validate
     rules:
@@ -26,6 +30,27 @@ $(document).ready ->
         required: true
         minlength: 8
         maxlength: 255
+
+  $("#newPasswordForm").validate
+    rules:
+      "user[email]":
+        required: true
+        email: true
+
+  $("#changePasswordForm").validate
+    rules:
+      "user[password]":
+        required: true
+        minlength: 8
+        maxlength: 255
+      "user[password_confirmation]":
+        required: true
+        minlength: 8
+        maxlength: 255
+        equalTo: "#user_password"
+    messages:
+      "user[password_confirmation]":
+        equalTo: I18n.t('validations.messages.confirm_change_password')
 
   return
 

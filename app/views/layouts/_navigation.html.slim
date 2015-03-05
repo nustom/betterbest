@@ -20,7 +20,7 @@
         - if user_signed_in?
             li.dropdown
               a.dropdown-toggle data-toggle="dropdown"
-                = t('.current_user')
+                = current_user.username if current_user.username
                 span.caret
               ul.dropdown-menu
                 li
