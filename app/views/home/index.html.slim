@@ -1,2 +1,5 @@
-h1.text-center
-  = t('.welcome_to')
+- if user_signed_in?
+  = render 'home/default_activities'
+- else
+  h1.text-center
+    = t('.welcome_to')
