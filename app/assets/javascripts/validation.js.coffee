@@ -52,5 +52,15 @@ $(document).ready ->
       "user[password_confirmation]":
         equalTo: I18n.t('validations.messages.confirm_change_password')
 
+  $("#newGoalForm").validate
+    rules:
+      "goal[count]":
+        required: true
+        number: true
+        min: 0
+        max: 100
+      "goal[period]":
+        required: true
+
   return
 

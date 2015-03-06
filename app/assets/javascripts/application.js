@@ -14,6 +14,7 @@
 //= require i18n/translations
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-datepicker
 //= require twitter/bootstrap
 //= require_tree .
 //= require jquery.validate.min

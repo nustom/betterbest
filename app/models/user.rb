@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :confirmable
 
   has_many :identities, dependent: :destroy
+  has_many :activities, dependent: :destroy
+  has_many :goals, through: :activities
   validates :email, uniqueness: { case_sensitive: false }, presence: true
   validates :username, uniqueness: { case_sensitive: false }
 

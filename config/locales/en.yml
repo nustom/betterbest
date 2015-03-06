@@ -39,6 +39,11 @@ en:
       welcome_to: "Welcome to Better Best Me"
   common:
     submit: Submit
+    save: Save
+    cancel: Cancel
+  datetime:
+    formats:
+      default: "%Y-%m-%d"
   devise:
     registrations:
       new:
@@ -76,3 +81,11 @@ en:
     messages:
       confirm_password: Password confirm must match with password
       confirm_change_password: New password confirm must match with new password
+  goals:
+    messages:
+      created_success: Goal was created successfully.
+    new:
+      add_goal: Add Goal
+      activity: Activity
+      count: Count
+      month: Month

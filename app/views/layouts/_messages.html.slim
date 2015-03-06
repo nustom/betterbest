@@ -1,4 +1,9 @@
-- flash.each do |name, msg|
-  - if msg.is_a?(String) && !msg.blank?
-    = content_tag :div, msg, class: "alert #{name=='notice' ? 'alert-success' : 'alert-danger'}"
+- [:notice, :error, :alert].each do |level|
+  - unless flash[level].blank?
+    .col-md-12
+      div class="alert alert-dismissable alert-#{flash_class(level)}"
+        button type="button" class="close" data-dismiss="alert" aria-hidden="true"
+          | &times;
+        = flash[level]
+
 
