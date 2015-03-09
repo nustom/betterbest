@@ -8,8 +8,9 @@ class Goal < ActiveRecord::Base
   validates :month_of_period, presence: true
   validates :year_of_period, presence: true
 
+  delegate :name, :unit_of_measurement, to: :activity
+
   def name_activity
     self.activity.name
   end
-
 end

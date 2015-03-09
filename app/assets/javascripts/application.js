@@ -16,6 +16,7 @@
 //= require jquery_ujs
 //= require bootstrap-datepicker
 //= require twitter/bootstrap
-//= require_tree .
 //= require jquery.validate.min
-//= require validation
+//= require dataTables/jquery.dataTables.min
+//= require dataTables/dataTables.responsive.min
+//= require_tree .

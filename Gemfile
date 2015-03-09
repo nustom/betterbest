@@ -59,3 +59,4 @@ gem 'devise', '~> 3.4.1'
 
 gem 'slim-rails', '~> 3.0.1'
 gem 'i18n-js'
+gem 'kaminari', '~> 0.16.3'

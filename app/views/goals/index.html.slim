@@ -1,0 +1,13 @@
+.row
+  .col-md-8.col-md-offset-2
+    h2.text-center
+      = t('.overview')
+    table.table.table-striped.table-hover.dt-responsive#goals-table*{'data-source'=>goals_url(format: 'json')}
+      thead
+        tr
+          th
+            = t('.items')
+          th
+            = t('.unit')
+          th
+            = t('.count')
