@@ -89,3 +89,11 @@ en:
       activity: Activity
       count: Count
       month: Month
+  goal_activities:
+    messages:
+      created_success: Goal activity was created successfully.
+    new:
+      add_activity: Add Activity
+      activity: Activity
+      count: Count
+      date: Date

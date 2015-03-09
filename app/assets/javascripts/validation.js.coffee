@@ -62,5 +62,15 @@ $(document).ready ->
       "goal[period]":
         required: true
 
+  $("#newGoalActivityForm").validate
+    rules:
+      "goal_activity[count]":
+        required: true
+        number: true
+        min: 0
+        max: 100
+      "goal_activity[period]":
+        required: true
+
   return
 

@@ -7,4 +7,9 @@ class Goal < ActiveRecord::Base
   validates :period, presence: true
   validates :month_of_period, presence: true
   validates :year_of_period, presence: true
+
+  def name_activity
+    self.activity.name
+  end
+
 end

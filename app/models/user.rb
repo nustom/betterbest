@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   has_many :identities, dependent: :destroy
   has_many :activities, dependent: :destroy
   has_many :goals, through: :activities
+  has_many :goal_activities, through: :goals
   validates :email, uniqueness: { case_sensitive: false }, presence: true
   validates :username, uniqueness: { case_sensitive: false }
 
